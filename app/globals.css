@@ -36,7 +36,7 @@
     @apply flex justify-center items-center h-[50px] px-8 text-white font-semibold uppercase;
   }
   .btn-icon {
-    @apply flex justify-center items-center w-[50px] h-[50px] px-8 text-2xl text-white;
+    @apply flex justify-center items-center w-[50px] h-[50px] text-2xl text-white;
   }
   .btn-accent {
     @apply bg-accent hover:bg-accent-hover transition-all
@@ -48,4 +48,14 @@
     @apply bg-white hover:bg-white/90 text-primary transition-all
   }
   
+}
+
+/* swiper styles */
+.popular-bike-slider .swiper-wrapper {
+  @apply !h-[500px];
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  @apply bg-accent;
 }
