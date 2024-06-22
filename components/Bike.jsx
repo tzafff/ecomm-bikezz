@@ -9,7 +9,6 @@ import {CgEye, CgShoppingBag} from 'react-icons/cg'
 const Bike = ({bike}) => {
 
     const popularBikeCat = bike.categories.find((bike) => bike.name === 'popular');
-    console.log(popularBikeCat)
     return (
         <div className="group">
             <div className="border h-[328px] mb-5 p-4 overflow-hidden relative">
@@ -17,19 +16,22 @@ const Bike = ({bike}) => {
                  transition-all duration-300 flex justify-center items-center">
                     {/*    badge    */}
                     {popularBikeCat && (
-                        <divc
+                        <div
                             className="absolute top-8 left-8 bg-accent text-white px-3 text-sm uppercase font-medium rounded-full">
                             Popular
-                        </divc>
+                        </div>
                     )}
-                    <Image src={urlForImage(bike?.images[0]).url()} alt='' width={240} height={147}/>
+                    <Image src={urlForImage(bike?.images[0]).url()} alt='' width={240} height={147} priority/>
                 </div>
                 {/*    btn group    */}
                 <div
                     className="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center gap-[10px] opacity-0 group-hover:opacity-100 transition-all duration-300">
-                    <AddToCartBtn btnStyles="btn btn-accent rounded-full"/>
+                    <AddToCartBtn
+                        btnStyles="btn-icon btn-accent rounded-full"
+                        icon={<CgShoppingBag />}
+                    />
                     <Link href={`/product/${bike.slug}`}>
-                        <button className="btn-icon btn-primary" >
+                        <button className="btn-icon btn-primary rounded-full" >
                             <CgEye/>
                         </button>
                     </Link>
@@ -37,7 +39,7 @@ const Bike = ({bike}) => {
             </div>
             <h5 className="text-gray-400 font-semibold">{bike.categories[0].name} bike</h5>
             <h4 className="mb-1">{bike.name}</h4>
-            <div className="text-lg font-bold text-accent">€{bike.price}</div>
+            <div className="text-lg font-bold text-accent">{bike.price}€</div>
         </div>
     )
 }

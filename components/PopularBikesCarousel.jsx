@@ -25,7 +25,6 @@ const PopularBikesCarousel = ({bikes}) => {
         >
             {
                 bikes.map(bike => {
-                    console.log(bike)
                     return <SwiperSlide key={bike._id}>
                         <Bike bike={bike}/>
                     </SwiperSlide>

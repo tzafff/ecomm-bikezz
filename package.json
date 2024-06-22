@@ -9,6 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.1",
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-radio-group": "^1.2.0",
+    "@radix-ui/react-scroll-area": "^1.1.0",
+    "@radix-ui/react-toast": "^1.2.1",
     "@sanity/client": "^6.20.1",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.47.1",
