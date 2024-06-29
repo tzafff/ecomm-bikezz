@@ -1,9 +1,20 @@
-"use client" // TODO CHECK IF IT NEEDS TO BE CLIENT
+"use client"
 import React from 'react'
 import {useShoppingCart} from "use-shopping-cart";
 import {useToast} from "@/components/ui/use-toast";
 
-const AddToCartBtn = ({btnStyles, text, icon, id, currency, name, description, images, price}) => {
+const AddToCartBtn = ({
+                          btnStyles,
+                          text,
+                          icon, 
+                          id,
+                          currency,
+                          name,
+                          description,
+                          images,
+                          price,
+                          price_id,
+                      }) => {
 
     const {addItem} = useShoppingCart();
     const {toast} = useToast();
@@ -14,7 +25,10 @@ const AddToCartBtn = ({btnStyles, text, icon, id, currency, name, description, i
         description: description,
         images: images,
         price: price,
+        price_id: price_id,
     }
+   // console.log(bike)
+
     return (
         <button className={`${btnStyles}`} onClick={() => {
             addItem(bike);

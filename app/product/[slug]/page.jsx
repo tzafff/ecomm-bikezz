@@ -21,7 +21,7 @@ const getData = async (slug) => {
 }
 const ProductDetails = async ({params}) => {
     const bike = await getData(params.slug)
-    console.log(bike)
+    //console.log(bike)
 
     return (
         <section className="pt-24 pb-32">
@@ -49,7 +49,15 @@ const ProductDetails = async ({params}) => {
                                 <p className="text-lg font-semibold">{bike.price}€</p>
                             </div>
                             <p>{bike.description}</p>
-                            <AddToCartBtn text="Add to cart" btnStyles="btn btn-accent rounded-full"/>
+                            <AddToCartBtn
+                                price_id={bike.price_id}
+                                name={bike.name}
+                                currency="EUR"
+                                description={bike.description}
+                                images={bike.images}
+                                price={bike.price}
+                                text="Add to cart"
+                                btnStyles="btn btn-accent rounded-full"/>
                         </div>
                     {/*    INFO */}
                         <div className="flex flex-col gap-3">
