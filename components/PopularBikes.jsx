@@ -22,7 +22,7 @@ const getData = async () => {
 
 const PopularBikes = async () => {
     const bikes = await getData();
-    console.log(bikes);
+    //console.log(bikes);
     return <section className="py-24">
         <div className="container mx-auto">
             <h2 className="text-center">Most Popular Bikes</h2>
