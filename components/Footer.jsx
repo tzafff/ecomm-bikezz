@@ -10,13 +10,13 @@ const Footer = () => {
                     <div>
                         <h2 className="capitalize leading-tight mb-2">Subscribe to our newsletter</h2>
                         <p className="text-white/60">
-                            Be the first to get the latest news about trends, promotions and much more!\
+                            Be the first to get the latest news about trends, promotions and much more!
                         </p>
                     </div>
                 {/*    form*/}
                     <form className="flex flex-col xl:flex-row w-full max-w-[720px] mx-auto gap-5">
                         <Input placeholder="Your email"/>
-                        <button className="btn w-full xl:max-w-[150px] h-[60px] btn-accent rounded-full"></button>
+                        <button className="btn w-full xl:max-w-[150px] h-[60px] btn-accent rounded-full">Join</button>
                     </form>
                 {/*    socials*/}
                     <div className="flex gap-8 mx-auto text-[20px] text-white/60 mb-20">

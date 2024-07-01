@@ -16,9 +16,9 @@ const Hero = () => {
                         </p>
                     {/*    btn group*/}
                         <div className="flex items-center gap-4 mx-auto xl:mx-0">
-                            <Link href="/our-bikes" className="mx-auto md:mx-0">
-                                <button className="btn btn-primary rounded-full">Shop Now</button>
-                            </Link>
+                            {/*<Link href="/our-bikes" className="mx-auto md:mx-0">*/}
+                            {/*    <button className="btn btn-primary rounded-full">Shop Now</button>*/}
+                            {/*</Link>*/}
                             <Link href="/our-bikes" className="mx-auto md:mx-0">
                                 <button className="btn btn-accent rounded-full">Our Bikes</button>
                             </Link>
